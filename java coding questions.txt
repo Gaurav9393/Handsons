@@ -1,0 +1,234 @@
+Occurance of each character in string :
+
+
+import java.util.*;
+public class practice {
+
+	public static void main(String[] args) {
+		HashMap<Character,Integer> arr=new HashMap<>();
+		String str="gaurav";
+		for(int i=0;i<str.length();i++)
+		{
+			if(arr.containsKey(str.charAt(i)))
+					{
+				arr.put(str.charAt(i), arr.get(str.charAt(i))+1);
+					}
+			else
+			{
+				arr.put(str.charAt(i),1);
+					
+			}
+		}
+		System.out.println(arr);
+
+	}
+
+}
+*********************************************************************
+
+// print ovels in the String
+
+public class Main
+{
+	public static void main(String[] args) {
+	    String str="gaurav";
+	   
+	    for(int i=0;i<str.length();i++)
+	    {
+	        if(str.charAt(i)=='a' || str.charAt(i)=='u' || str.charAt(i)=='i' || str.charAt(i)=='o' || str.charAt(i)=='e'){
+	            System.out.println(str.charAt(i));
+	        }
+	       
+	    }
+	
+	}
+}
+
+*******************************************************************************
+
+//Reverse number Program
+
+public class Main
+{
+	public static void main(String[] args) {
+	    int n=1234,rev=0,rem=0;
+	   
+	    while(n>0)
+	    {
+	       rem=n%10;
+	       rev=rev*10+rem;
+	       n/=10;
+	    }
+	    System.out.println(rev);
+	       
+	    }
+	
+	}
+
+*********************************************************************************
+
+//prime  number between n and m Program
+
+public class Main
+{
+    
+    public  int primenm(int n)
+    {
+        boolean flag=false;
+        for(int i=2;i<n;i++)
+        {
+            if(n%i==0)
+            {
+                flag=true;
+            
+                break;
+            }
+            
+        
+        }
+        if(flag)
+        {
+            return -1;
+        }
+        else{
+            return n;
+        }
+    }
+	public static void main(String[] args) {
+	    int n=2,m=20;
+	   Main m1=new Main();
+	   
+	    for(int i=n;i<m;i++)
+	    {
+	        if(m1.primenm(i)!=-1)
+	        {
+	          System.out.println(i);  
+	        }
+	       
+	    }
+	  
+	       
+	    }
+	
+	}
+
+*****************************************************************************
+
+//amstrong number Program
+
+public class Main
+{
+    
+   
+	public static void main(String[] args) {
+	    int n=371,n1=n,sum=0;
+	    int digit=(int)Math.log10(n)+1;
+	    while(n>0)
+	    {
+	        int rem=n%10;
+	        sum+=Math.pow(rem,digit);
+	        n/=10;
+	    }
+	      
+	      if(sum==n1)
+	      {
+	          System.out.println("amstrong");
+	      }
+	    }
+	
+	}
+
+****************************************************************************
+//factorial of number Program
+
+public class Main
+{
+    
+   
+	public static void main(String[] args) {
+	    int n=5,fact=1;
+	       
+	    for(int i=1;i<n+1;i++)
+	    {
+	        fact=fact*i;
+	    }
+	      
+	     
+	          System.out.println(fact);
+	      
+	    }
+	
+	}
+
+**********************************************************************
+//fabonacci series of number Program
+
+public class Main
+{
+    
+   
+	public static void main(String[] args) {
+	    int n=5,l1=0,l2=1,ans=0;
+	       
+	    for(int i=0;i<n;i++)
+	    {
+	       ans=l1+l2; 
+	       System.out.println(ans);
+	       l1=l2;
+	       l2=ans;
+	    }
+	      
+	     
+	         // System.out.println(fact);
+	      
+	    }
+	
+	}
+
+***********************************************************************
+Throw example:
+
+
+public class Main
+{
+    
+   
+    
+	public static void main(String[] args) {
+	    
+	    int a=0;
+	    try  
+	    {
+	      int  ans=5/a; 
+	    
+	     
+	       throw new ArithmeticException("math exception"); 
+	    }
+	    catch(ArithmeticException e)
+	    {
+	       	System.out.println("Hello World"+e.getMessage()); 
+	    }
+	   
+	
+	}
+}
+**************************************************************************************************
+//Functional interface Example
+interface fun1
+{
+    public void fun();
+}
+public class Main
+{
+    
+    
+    
+	public static void main(String[] args) {
+	    
+	    fun1 f=()->{System.out.println("Hello World");};
+	    f.fun();
+	    
+		
+	}
+}
+*****************************************************************************
